@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey form</title>
+</head>
+<body>
+  <h1 id="title">Survey form</h1>
+  <p id="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam in sit excepturi ipsam cum sunt placeat autem amet? Itaque eaque ut unde facere voluptates animi sed, harum aliquam. Accusantium, minus?</p>
+  <form action="http://dummy-url.com" id="survey-form">
+    <fieldset>
+      <label id="name-label" for="name">
+        Name
+        <input 
+          type="text" 
+          id="name" 
+          placeholder="Enter your name here"
+          required
+          oninvalid="setCustomValidity('Please enter your name')"
+        >
+      </label>
+      <label id="email-label" for="email">
+        Email
+        <input 
+          type="email" 
+          id="email" 
+          placeholder="example@example.com"
+          required
+          oninvalid="setCustomValidity('Please enter a valid email address')"
+        >
+      </label>
+      <label id="number-label" for="number">
+        Age
+        <input 
+          type="number" 
+          id="number" 
+          min=18 
+          max=300 
+          placeholder="18"
+          required
+          oninvalid="setCustomValidity('You must be at least 18 years old')" 
+        >
+      </label>
+    </fieldset>
+    <fieldset id="survey-form">
+      <label id="department-label" for="dropdown">
+      Department
+      <select name="department" id="dropdown">
+        <option value="" disabled>select your department</option>
+        <option value="development">Development</option>
+        <option value="digital-art">Digital art</option>
+        <option value="game-design">Game design</option>
+      </select>
+      </label>
+    </fieldset>
+    <fieldset>
+      <label for="gender-select-male">
+        Male
+        <input type="radio" id="gender-select-male" name="gender" value="male">
+      </label>
+      <label for="gender-select-female">
+        Female
+        <input type="radio" id="gender-select-female" name="gender" value="female">
+      </label>
+      <label for="gender-select-genderless">
+        Genderless
+        <input type="radio" id="gender-select-genderless" name="gender" value="genderless">
+      </label>
+    </fieldset>
+    <fieldset>
+      <label for="example1">Example1<input id="example1" name="radio_buttons" type="checkbox" value="example_1"></label>
+      <label for="example2">Example2<input id="example2" name="radio_buttons" type="checkbox" value="example_2"></label>
+      <label for="example3">Example3<input id="example3" name="radio_buttons" type="checkbox" value="example_3"></label>
+    </fieldset>
+    <fieldset>
+      <label for="message">
+        Your message
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+      </label>
+    </fieldset>
+    <input id="submit" type="submit" value="Submit">
+  </form>
+</body>
+</html>
